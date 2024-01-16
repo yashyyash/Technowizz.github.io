@@ -675,14 +675,14 @@ nav {
 /* Media query for screens up to 410px */
 @media only screen and (max-width: 410px) {
     .techeves {
-        height: 390vh; /* Adjust the height as needed */
+        height: 420vh; /* Adjust the height as needed */
     }
 }
 
 /* Media query for screens between 411px and 610px */
 @media only screen and (min-width: 411px) and (max-width: 610px) {
     .techeves {
-        height: 360vh; /* Adjust the height as needed */
+        height: 420vh; /* Adjust the height as needed */
     }
 }
 
