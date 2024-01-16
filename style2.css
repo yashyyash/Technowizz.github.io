@@ -1,0 +1,885 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/********************************************************************* header ********************************************************************/
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 40, 0.7)), url(./tunnel.gif);
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: center;
+}
+
+#college-logo-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+#logo-left,
+#logo-right {
+    margin: 10px;
+}
+
+#college-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#presents,
+#technowizz {
+    margin-top: auto; /* Push to the bottom */
+}
+
+/********************************************************************* header ********************************************************************/
+
+
+
+
+
+
+/******************************************************************navbar***********************************************************************/
+.nav-container {
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.nav-links ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+.nav-links ul li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#presents,
+#technowizz {
+    margin-top: 20px;
+}
+/******************************************************************navbar***********************************************************************/
+
+
+/******************************************************************ANIMATION***********************************************************************/
+#presents {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: pop-out-presents 3s ease-in-out forwards, delay-presents 2s forwards;
+    font-size: 30px;
+    margin-top: 200px; /* Adjust margin for spacing */
+}
+
+@keyframes pop-out-presents {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes delay-presents {
+    to {
+        animation: none;
+    }
+}
+
+#year {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: pop-out-presents 3s ease-in-out forwards, delay-presents 2s forwards;
+    font-size: 18px;
+    margin-top: 200px; /* Adjust margin for spacing */
+}
+
+@keyframes pop-out-presents {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes delay-presents {
+    to {
+        animation: none;
+    }
+}
+
+/* #technowizz {
+    opacity: 0;
+    transform: translateY(30px) scale(0.1);
+    animation: pop-in-technowizz 3s ease-in-out forwards;
+    font-size: 150px;
+    font-weight: bold;
+    margin-top: 20px; 
+}
+
+ @keyframes pop-in-technowizz {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.1);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+}  */
+
+#technowizz {
+    opacity: 0;
+    transform: translateY(30px) scale(0.1);
+    animation: pop-in-technowizz 4s ease-in-out forwards, jiggle-technowizz 10s ease-in-out 2s infinite;
+    font-size: 150px;
+    font-weight: bold;
+    margin-top: 20px; 
+} 
+
+
+@keyframes pop-in-technowizz {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.1);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+}
+
+@keyframes jiggle-technowizz {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+/******************************************************************ANIMATION***********************************************************************/
+
+
+
+/******************************************************************TechEve***********************************************************************/
+.techeves {
+    /* height: 100vh; */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./hdmagicforest.jpg");
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.espoeves {
+    /* height: 100vh; */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./esportsBG.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Seminars {
+    /* height: 100vh; */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./newseminarbg.jpg");
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 10px auto; /* 10px from the top and centered horizontally */
+}
+
+.card {
+    background-image: url("./BagGroundDefault.png");
+    flex: 0 1 calc(25% - 20px); /* 25% width with 20px margin on both sides */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.card h2 {
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card a {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add margin between buttons */
+    padding: 15px 80px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+/****************************************************************   TechEve   ***********************************************************************/
+
+/**************************************************************** Page 2 UPCOMING EVENT *************************************************************/
+.fest-magic {
+    margin-top: 180px;
+    text-align: center;
+}
+
+.fest-magic h2 {
+    font-size: 28px;
+    color: #ffffff; 
+    margin-bottom: 10px;
+}
+
+.fest-magic p {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fest-magic {
+    animation: rotate 10s infinite linear;
+}
+
+
+.bruhhhhhhh {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+}
+
+.ekline {
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
+
+/******************************************************************Page 2 UPCOMING EVENT************************************************************/
+
+
+/****************************************************************** FOOTER ***********************************************************************/
+.footer {
+    background-color: #1f1472;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Add hover effect to navigation links */
+.footer a:hover {
+    color: #ffd700; /* Change to your desired hover color */
+}
+
+/****************************************************************** FOOTER ***********************************************************************/
+
+
+
+
+/**********************************************************Mobile-friendly styles********************************************************************/
+/* Mobile-friendly styles */
+@media only screen and (max-width: 900px) {
+    #college-logo-name {
+        flex-wrap: nowrap;
+    }
+
+    #college-name {
+        font-size: 18px;
+    }
+
+    .nav-links ul li {
+        margin: 5px 10px; /* Adjust spacing between nav items */
+    }
+
+    #presents {
+        font-size: 24px;
+    }
+}
+
+/* Screen sizes between 1600px and 601px */
+@media only screen and (max-width: 1600px) and (min-width: 601px) {
+    #logo-left,
+    #college-name,
+    #logo-right {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+/* Larger than 1600px */
+@media only screen and (min-width: 1601px) {
+    #college-name {
+        font-size: 40px; /* Increase font size for larger screens */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-links ul li a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Larger than 600px */
+@media only screen and (min-width: 601px) {
+    .nav-links ul li a {
+        font-size: 20px; /* Default font size for larger screens */
+    }
+}
+
+/* Larger than 900px */
+@media only screen and (min-width: 901px) {
+    .nav-links ul li a {
+        font-size: 18px; /* Adjust font size for screens between 901px and 1599px */
+    }
+}
+
+/* Larger than 1600px */
+@media only screen and (min-width: 1600px) {
+    .nav-links ul li a {
+        font-size: 20px; /* Adjust font size for screens larger than 1600px */
+    }
+}
+
+/* Smaller than 400px */
+@media only screen and (max-width: 400px) {
+    #presents {
+        font-size: 20px;
+        margin-top: 80px;
+    }
+}
+
+/* 401px to 600px */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    #presents {
+        font-size: 30px;
+        margin-top: 90px;
+    }
+}
+
+/* 601px to 800px */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    #presents {
+        font-size: 25px;
+        margin-top: 150px;
+    }
+}
+
+/* 801px to 1200px */
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+    #presents {
+        font-size: 30px;
+        margin-top: 180px;
+    }
+}
+
+/* Larger than 1200px */
+@media only screen and (min-width: 1201px) {
+    #presents {
+        font-size: 40px;
+        margin-top: 200px;
+    }
+}
+
+/* Smaller than 400px */
+@media only screen and (max-width: 400px) {
+    #year {
+        font-size: 20px;
+        margin-top: 60px;
+    }
+}
+
+/* 401px to 600px */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    #year {
+        font-size: 26px;
+        margin-top: 80px;
+    }
+}
+
+/* 601px to 800px */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    #year {
+        font-size: 30px;
+        margin-top: 100px;
+    }
+}
+
+/* 801px to 1200px */
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+    #year {
+        font-size: 36px;
+        margin-top: 140px;
+    }
+}
+
+/* Larger than 1200px */
+@media only screen and (min-width: 1201px) {
+    #year {
+        font-size: 36px;
+        margin-top: 160px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #technowizz {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    #technowizz {
+        font-size: 60px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    #technowizz {
+        font-size: 90px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+    #technowizz {
+        font-size: 120px;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+    #technowizz {
+        font-size: 150px;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+    #technowizz {
+        font-size: 180pxpx;
+        margin-top: 60px;
+    }
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 411px) {
+    .header {
+        min-height: 80vh; /* Adjust the value as needed for smaller screens */
+    }
+}
+
+@media only screen and (min-width: 412px) and (max-width: 600px) {
+    .header {
+        min-height: 90vh; /* Adjust the value as needed for smaller screens */
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    .header {
+        min-height: 100vh; /* Adjust the value as needed for smaller screens */
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+    .header {
+        min-height: 100vh; /* Adjust the value as needed for smaller screens */
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+    .header {
+        min-height: 100vh; /* Adjust the value as needed for smaller screens */
+    }
+}
+
+/* Media query for screens up to 410px */
+@media only screen and (max-width: 410px) {
+    .card {
+        width: calc(100% - 20px); /* 100% width with 20px margin on both sides */
+        margin: 0 10px 20px 10px; /* Add margin between cards */
+    }
+}
+
+/* Media query for screens between 411px and 610px */
+@media only screen and (min-width: 411px) and (max-width: 610px) {
+    .card {
+        width: calc(80% - 20px); /* 50% width with 20px margin on both sides */
+        margin: 0 10px 20px 10px; /* Add margin between cards */
+    }
+}
+
+/* Media query for screens between 611px and 810px */
+@media only screen and (min-width: 611px) and (max-width: 810px) {
+    .card {
+        width: calc(80% - 20px); /* 33.333% width with 20px margin on both sides */
+        margin: 0 10px 20px 10px; /* Add margin between cards */
+    }
+}
+
+/* Media query for screens between 811px and 1010px */
+@media only screen and (min-width: 811px) and (max-width: 1010px) {
+    .card {
+        width: calc(80% - 20px); /* 33.333% width with 20px margin on both sides */
+        margin: 0 10px 20px 10px; /* Add margin between cards */
+    }
+}
+
+/* Media query for screens between 1011px and 1210px */
+@media only screen and (min-width: 1011px) and (max-width: 1210px) {
+    .card {
+        width: calc(80% - 20px); /* 33.333% width with 20px margin on both sides */
+        margin: 0 10px 20px 10px; /* Add margin between cards */
+    }
+}
+
+/* Media query for screens between 1211px and 1410px */
+@media only screen and (min-width: 1211px) and (max-width: 1410px) {
+    .card {
+        width: calc(80% - 20px); /* 33.333% width with 20px margin on both sides */
+        margin: 0 10px 20px 10px; /* Add margin between cards */
+    }
+}
+
+/* Media query for screens up to 410px */
+@media only screen and (max-width: 410px) {
+    .techeves {
+        height: 390vh; /* Adjust the height as needed */
+    }
+}
+
+/* Media query for screens between 411px and 610px */
+@media only screen and (min-width: 411px) and (max-width: 610px) {
+    .techeves {
+        height: 360vh; /* Adjust the height as needed */
+    }
+}
+
+/* Media query for screens between 611px and 810px */
+@media only screen and (min-width: 611px) and (max-width: 810px) {
+    .techeves {
+        height: 180vh; /* Adjust the height as needed */
+    }
+}
+
+/* Media query for screens between 811px and 1010px */
+@media only screen and (min-width: 811px) and (max-width: 1010px) {
+    .techeves {
+        height: 150vh; /* Adjust the height as needed */
+    }
+}
+
+/* Media query for screens between 1011px and 1210px */
+@media only screen and (min-width: 1011px) and (max-width: 1210px) {
+    .techeves {
+        height: 120vh; /* Adjust the height as needed */
+    }
+}
+
+/* Media query for screens between 1211px and 1410px */
+@media only screen and (min-width: 1211px) and (max-width: 1410px) {
+    .techeves {
+        height: 120vh; /* Adjust the height as needed */
+    }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 410px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 411px) and (max-width: 610px) {
+    /* Adjust styles for screen widths between 411px and 610px */
+    .footer-content {
+        /* Add or modify styles as needed */
+        .footer-content {
+            flex-direction: column;
+        }
+    
+        .footer ul {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 611px) and (max-width: 810px) {
+    /* Adjust styles for screen widths between 611px and 810px */
+    .footer-content {
+        /* Add or modify styles as needed */
+        .footer-content {
+            flex-direction: column;
+        }
+    
+        .footer ul {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 811px) and (max-width: 1010px) {
+    /* Adjust styles for screen widths between 811px and 1010px */
+    .footer-content {
+        /* Add or modify styles as needed */
+        .footer-content {
+            flex-direction: column;
+        }
+    
+        .footer ul {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1011px) and (max-width: 1210px) {
+    /* Adjust styles for screen widths between 1011px and 1210px */
+    .footer-content {
+        /* Add or modify styles as needed */
+        .footer-content {
+            flex-direction: column;
+        }
+    
+        .footer ul {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1211px) and (max-width: 1410px) {
+    /* Adjust styles for screen widths between 1211px and 1410px */
+    .footer-content {
+        /* Add or modify styles as needed */
+        .footer-content {
+            flex-direction: column;
+        }
+    
+        .footer ul {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1411px) {
+    /* Adjust styles for screen widths greater than 1410px */
+    .footer-content {
+        /* Add or modify styles as needed */
+        .footer-content {
+            flex-direction: column;
+        }
+    
+        .footer ul {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* Responsive styles */
+@media screen and (min-width: 411px) and (max-width: 610px) {
+    .fest-magic h2 {
+        font-size: 24px; /* Add your desired font-size value */
+        margin-top: 108px; /* Add your desired margin-bottom value */
+    }
+
+    .fest-magic p {
+        font-size: 14px; /* Add your desired font-size value */
+    }
+}
+
+@media screen and (min-width: 611px) and (max-width: 810px) {
+    .fest-magic h2 {
+        font-size: 26px; /* Add your desired font-size value */
+        margin-bottom: 10px; /* Add your desired margin-bottom value */
+    }
+
+    .fest-magic p {
+        font-size: 16px; /* Add your desired font-size value */
+    }
+}
+
+@media screen and (min-width: 811px) and (max-width: 1010px) {
+    .fest-magic h2 {
+        font-size: 28px; /* Add your desired font-size value */
+        margin-bottom: 12px; /* Add your desired margin-bottom value */
+    }
+
+    .fest-magic p {
+        font-size: 18px; /* Add your desired font-size value */
+    }
+}
+
+@media screen and (min-width: 1011px) and (max-width: 1210px) {
+    .fest-magic h2 {
+        font-size: 30px; /* Add your desired font-size value */
+        margin-bottom: 14px; /* Add your desired margin-bottom value */
+    }
+
+    .fest-magic p {
+        font-size: 20px; /* Add your desired font-size value */
+    }
+}
+
+@media screen and (min-width: 1211px) and (max-width: 1410px) {
+    .fest-magic h2 {
+        font-size: 32px; /* Add your desired font-size value */
+        margin-bottom: 16px; /* Add your desired margin-bottom value */
+    }
+
+    .fest-magic p {
+        font-size: 22px; /* Add your desired font-size value */
+    }
+}
+
+@media screen and (min-width: 1411px) {
+    .fest-magic h2 {
+        font-size: 34px; /* Add your desired font-size value */
+        margin-bottom: 18px; /* Add your desired margin-bottom value */
+    }
+
+    .fest-magic p {
+        font-size: 24px; /* Add your desired font-size value */
+    }
+}
+/**********************************************************Mobile-friendly styles********************************************************************/
